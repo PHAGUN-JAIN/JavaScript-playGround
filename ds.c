@@ -22,7 +22,7 @@ main()
 }
  push()
       {
-         if (top==10)                                  // for checking overflow condition 
+         if (top==9)                                  // for checking overflow condition 
             {   printf("overflow");
                  exit(0);
              }
