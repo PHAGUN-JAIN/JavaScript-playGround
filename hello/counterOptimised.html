@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>count</title>
+    <script>
+        var counter = 0;
+        function count(){
+            counter++;
+
+            if (counter%10 === 0){
+                alert(`counter has reached ${counter}`);
+            }
+            
+            document.querySelector("h1").innerHTML = counter;
+        }
+
+        document.addEventListener('DOMContentLoaded', () =>{
+            document.querySelector("button").onclick = count;
+        });                                         
+        //eventlistenr method takes two arguments one an event 
+       //and  otherthe function 
+      
+    </script>
+</head>
+<body>
+    <h1>
+        0
+    </h1>
+    <button>count</button>
+</body>
+</html>
