@@ -3,12 +3,35 @@
         <title>
             tasks
         </title>
-        <body>
+       <script>
+           let btn = document.querySelector('#btn');
+            let task = document.querySelector('#task');
+            let tasks = documnt.querySelector('#tasks');
+
+           document.addEventListener('DOMContentLoaded', ()=>{
+            
+            document.querySelector('form').onsubmit = ()=>{
+                const li_item = task.value;
+                const li = document.createElement('li');
+                li.innerHTML = li_item;
+
+                tasks.append(li);
+
+                return false;
+            }
+               
+           });
+       </script>
+    </head>
+    <body>
+        <form action="">
             <h1>
                 Tasks
             </h1>
-            <input type="text">
-            <input type="submit">
-        </body>
-    </head>
+            <input type="text" id="task">
+            <input type="submit" id="btn">
+            <ul id="tasks"></ul>
+        </form>
+        
+    </body>
 </html>
